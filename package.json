@@ -4,11 +4,25 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack serve --config ./webpack.config.js --host localhost --port 8080 --open",
+    "build": "webpack"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "css-loader": "^5.0.1",
+    "script-loader": "^0.7.2",
+    "style-loader": "^2.0.0",
     "three.js": "^0.77.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "babel-loader": "^8.2.2",
+    "html-webpack-plugin": "^4.5.0",
+    "webpack": "^5.11.1",
+    "webpack-cli": "^4.3.0",
+    "webpack-dev-server": "^3.11.1"
   }
 }
