@@ -1,8 +1,9 @@
 import SceneObjectIdentifier from './SceneObjectIdentifier';
 
 class SceneObject {
-    constructor() {
+    constructor(displayName = null) {
         this._sid = SceneObjectIdentifier.generateSID();
+        this._displayName = displayName;
     }
 
     get sid() {
@@ -12,8 +13,12 @@ class SceneObject {
     get threeJSObject() {
         return null;
     }
+    get displayName() {
+        return this._displayName
+    }
 
-    rerender() {
+    rerender(scene, camera, callBack=()=>{}) {
+        callBack();
     }
 }
 
